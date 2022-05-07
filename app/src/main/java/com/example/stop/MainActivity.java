@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button startButton=(Button) findViewById(R.id.startButton);
-        Button resetButton=(Button) findViewById(R.id.startButton);
+        Button resetButton=(Button) findViewById(R.id.resetButton);
 
         timeText=(TextView)findViewById(R.id.timeText);
     //시작, 정지 버튼 눌렀을 때
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 if (buttonCount == 0) {
                     isRunning = true;
                     timeThread = new Thread(new timeThread());
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         ////////////////////초기화 눌렀을 때
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 if(buttonCount==0){
                     i=0;
                     timeText.setText("00:00:00:00");
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
             int min=(msg.arg1/100)/60;
             int hour=(msg.arg1/100)/100/360;
 
-            String result=String.format("%02d:%02d:%02d:02d",hour,min,sec,mSec);
+            String result=String.format("%02d:%02d:%02d:%02d",hour,min,sec,mSec);
             timeText.setText(result);
         }
      };

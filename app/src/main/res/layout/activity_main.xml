@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="10">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,6 +18,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="15sp"
             android:text="시작" />
 
         <Button
@@ -24,6 +26,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:textSize="15sp"
             android:text="초기화" />
 
     </LinearLayout>
@@ -31,20 +34,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
+        android:layout_weight="0">
 
         <TextView
             android:id="@+id/timeText"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:gravity="center"
+            android:textSize="25sp"
             android:hint="시간" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="8">
+        android:layout_weight="1">
 
     </LinearLayout>
 </LinearLayout>
